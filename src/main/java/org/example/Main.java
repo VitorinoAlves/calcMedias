@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int primeiraNota, segundaNota, terceiraNota, quartaNota, media;
+        double primeiraNota, segundaNota, terceiraNota, quartaNota, media;
 
         System.out.println("Calculadora de médias");
         System.out.printf("Informe a primeira nota: ");
@@ -23,5 +23,13 @@ public class Main {
         media = (primeiraNota + segundaNota + terceiraNota + quartaNota)/4;
 
         System.out.println("Sua média é: " + media);
+
+        if (media>=7){
+            System.out.println("Aluno Aprovado!");
+        } else if (media>=5){
+            System.out.println("Aluno de recuperação");
+        } else {
+            System.out.println("Aluno reprovado");
+        }
     }
 }
